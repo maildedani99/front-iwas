@@ -1,0 +1,6 @@
+.navbar {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+}
