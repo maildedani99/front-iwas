@@ -4,6 +4,7 @@ import logo from "../../assets/iwastextblue.png";
 import "../Navbar/navbar.css";
 import Button from "../Button";
 import LoginModal from "../LoginModal";
+import { searchStyles } from "../../styles/styles";
 
 const Navbar = (props) => {
   const [loginModalOpened, setLoginModalOpened] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <div className="navbar border-b	w-full	">
+    <div className="navbar border-b	w-full 	">
       <LoginModal
         loginModalOpened={loginModalOpened}
         setLoginModalOpened={setLoginModalOpened}
@@ -24,7 +25,9 @@ const Navbar = (props) => {
           <img src={logo} alt="iwas" width="150px" />
         </div>
       </div>
-      <div className="flex flex-1"></div>
+      <div className="flex flex-1 justify-center	 p-5 ">
+        <input type="text" name="search" id="search" style={searchStyles} placeholder="Busca un evento..." />
+      </div>
       <div className="mt-6 mr-4">
         <Button
           value="Iniciar sesión"

@@ -1,36 +1,60 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import Modal from 'react-modal';
-import { loginModalStyles } from './styles';
-
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
+import 'react-responsive-modal/styles.css';
+import {Modal} from 'react-responsive-modal';
+import logo from '../../assets/iwblue.png';
+import { inputStyles } from '../../styles/styles';
+import Button from '../Button/index' ;
 
 const LoginModal = ({ loginModalOpened, setLoginModalOpened }) => {
-    
-    
+  
+  const onCloseModal = () => setLoginModalOpened (false);
 
-    
   return (
-    <Modal
-        isOpen={loginModalOpened}
-        //onAfterOpen={afterOpenModal}
-        onRequestClose={()=>setLoginModalOpened(false)}
-        style={loginModalStyles}
-        contentLabel="Example Modal"
-      >
-        <h2>Hello</h2>
-        <button onClick={()=>setLoginModalOpened(false)}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
+    <div>
+      <Modal open={loginModalOpened} onClose={onCloseModal} center>
+        <div className="text-5xl mt-8 flex flex-col items-center	font-bold	  text-center	">
+          <img src={logo} alt="iwas" width="50px" />
+          <span className="mt-8">Bienvenido a Iwas</span>
+          <input
+            style={inputStyles}
+            className="mt-10 text-2xl"
+            type="text"
+            name=""
+            id=""
+            placeholder="Correo"
+          />
+          <input
+            style={inputStyles}
+            className="my-4 text-2xl"
+            type="text"
+            name=""
+            id=""
+            placeholder="Contraseña"
+          />
+          <span className="text-sm  mb-16">
+            ¿Olvidaste tu contraseña?
+          </span>
+          <div className='text-4xl w-1/2 mb-16 '>
+          <Button
+                    value="Iniciar sesión"
+          onClick={() => console.log("inciar sesion click")}
+          textColor="white"
+          //backgroundColor="#e60023"
+          backgroundColor="#04a5a4"
+          />
+          </div>
+        <div className='flex w-6/12 text-sm font-normal 	'>
+        <p>
+              Si continúas, aceptas los <strong>Términos del servicio</strong> de Iwas y confirmas que has leído nuestra <strong>Política de privacidad</strong>
+        </p>
+        </div>
+        </div>
       </Modal>
-  )
-}
+    </div>
+  );
+};
 
-LoginModal.propTypes = {}
+LoginModal.propTypes = {};
 
-export default LoginModal
+export default LoginModal;
