@@ -14,7 +14,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <div className="navbar border-b	w-full 	">
+    <div className="navbar border-b	w-full flex fixed bg-white	">
       <LoginModal
         loginModalOpened={loginModalOpened}
         setLoginModalOpened={setLoginModalOpened}
