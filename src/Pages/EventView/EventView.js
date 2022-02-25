@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SideNav from '../../Conponents/SideNav/SideNav';
 import PicsView from '../PicsView/PicsView';
+import ComentsView from '../ComentsView/ComentsView';
 
 const EventView = props => {
   return (
@@ -10,7 +11,7 @@ const EventView = props => {
         <SideNav />
       </div>
       <div className='w-10/12 flex flex-col flex-1'>
-        <PicsView />
+        <ComentsView />
       </div>
     </div>
   );

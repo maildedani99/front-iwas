@@ -4,7 +4,7 @@ import UserCard from '../../Conponents/UserCard/UserCard'
 
 const PicsView = props => {
   return (
-      <div className='flex flex-wrap flex-full overflow-y-scroll	'>
+      <div className='flex flex-wrap flex-full 	'>
           <UserCard />
           <UserCard /><UserCard /><UserCard /><UserCard /><UserCard /><UserCard />  
     </div>

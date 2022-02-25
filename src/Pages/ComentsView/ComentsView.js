@@ -1,0 +1,18 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import ComentsPost from '../../Conponents/ComentsPost/ComentsPost'
+
+const ComentsView = props => {
+  return (
+    <div div className='flex flex-wrap flex-full mt-16 ml-8	justify-center	'>
+        <ComentsPost />
+        <ComentsPost />
+        <ComentsPost />
+        <ComentsPost />
+    </div>
+  )
+}
+
+ComentsView.propTypes = {}
+
+export default ComentsView
