@@ -7,12 +7,12 @@ import EventView from '../EventView/EventView'
 
 const MainPage = props => {
 
+  
+
   return (
     <div className='flex flex-wrap w-full '>
       <Navbar />
-    {/*   {events.map((item) => 
-        <EventCard item={item} key={item.id}/>
-      )} */}
+   
       <EventView />
     </div>
   )

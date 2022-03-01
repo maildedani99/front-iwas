@@ -5,10 +5,15 @@ import ComentsPost from '../../Conponents/ComentsPost/ComentsPost'
 const ComentsView = props => {
   return (
     <div div className='flex flex-wrap flex-full mt-16 ml-8	justify-center	'>
-        <ComentsPost />
-        <ComentsPost />
-        <ComentsPost />
-        <ComentsPost />
+        <div className="flex flex-col  shadow-lg p-4 w-10/12 rounded-md mt-4 ">
+            <ComentsPost />
+            <ComentsPost />
+            <ComentsPost />
+            <ComentsPost />
+            <ComentsPost />
+            <ComentsPost />
+        </div>
+       
     </div>
   )
 }

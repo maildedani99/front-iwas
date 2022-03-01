@@ -4,9 +4,9 @@ import UserComents from "../UserComents/UserComents";
 
 const ComentsPost = (props) => {
   return (
-    <div className="flex  shadow-lg p-4 w-10/12 rounded-md mt-4">
-        <UserComents />
-      <div className="flex flex-col flex-1 my-8 p-4 text-justify	  text-slate-500	 ">
+    <div className="flex   p-4 w-10/12  mt-4 border-b justify-self-center	content-center	">
+      <UserComents />
+      <div className="flex flex-col flex-1 my-8 p-4 text-justify  text-slate-500">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sint
           aut doloribus velit maiores impedit eius dolorem eos molestias fugit,
@@ -14,7 +14,7 @@ const ComentsPost = (props) => {
         </p>
         <div className="flex flex-1"></div>
         <div className="text-right	">
-        <p>20 marzo 2022</p>
+          <p>20 marzo 2022</p>
         </div>
       </div>
     </div>

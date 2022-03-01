@@ -1,3 +1,4 @@
+import EventsList from './Pages/EventsList/EventsList';
 import MainPage from './Pages/MainPage';
 
 
@@ -6,7 +7,6 @@ function App() {
     <div className="flex flex-col w-full ">
       <MainPage />
      
-      {/* <MainPage /> */}
     </div>
   );
 }

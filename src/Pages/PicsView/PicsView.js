@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import UserCard from '../../Conponents/UserCard/UserCard'
+import PicCard from '../../Conponents/PicCard/PicsCard'
 
 const PicsView = props => {
   return (
       <div className='flex flex-wrap flex-full 	'>
-          <UserCard />
-          <UserCard /><UserCard /><UserCard /><UserCard /><UserCard /><UserCard />  
+           <PicCard />
+           <PicCard />
+           <PicCard />
+           <PicCard />
+           <PicCard />
     </div>
   )
 }
