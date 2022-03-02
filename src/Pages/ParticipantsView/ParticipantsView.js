@@ -1,20 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import UserCard from '../../Conponents/UserCard/UserCard'
+import React from "react";
+import PropTypes from "prop-types";
+import UserCard from "../../Conponents/UserCard/UserCard";
 
-const ParticipantsView = props => {
+const ParticipantsView = (props) => {
   return (
-     <div className='flex flex-wrap flex-full 	'>
-    <UserCard />
-    <UserCard />
-    <UserCard />
-    <UserCard />
-    <UserCard />
-    
-</div>
-  )
-}
+    <div className="flex flex-wrap flex-full pt-16 justify-center">
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+      </div>
+  );
+};
 
-ParticipantsView.propTypes = {}
+ParticipantsView.propTypes = {};
 
-export default ParticipantsView
+export default ParticipantsView;

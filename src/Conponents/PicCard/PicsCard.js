@@ -12,4 +12,4 @@ const PicCard = props => {
 
 PicCard.propTypes = {}
 
-export default PicCard
+export default PicCard    

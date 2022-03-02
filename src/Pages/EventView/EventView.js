@@ -22,6 +22,7 @@ const EventView = (props) => {
           <SideNav  onEvent={onEvent} setOnEvent={setOnEvent}/>
         </div>
         <div className="w-10/12 flex flex-col flex-1">
+          
           <Routes>
           <Route exact path="/" element={<EventsList onEvent={onEvent} setOnEvent={setOnEvent} />} />
           <Route exact path="/Eventos" element={<EventsList onEvent={onEvent} setOnEvent={setOnEvent} />} />

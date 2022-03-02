@@ -4,25 +4,22 @@ import EventCard from "../../Conponents/EventCard/EventCard";
 import { events } from "../../EventDev/data";
 import { useNavigate } from "react-router-dom";
 
-const EventsList = ({ onEvent, setOnEvent }) => {
-  const navigate = useNavigate();
-
-  const eventHandleClick = () => {
-    setOnEvent(true);
-    navigate("/Imagenes");
-  };
+const EventsList = ({ setOnEvent }) => {
+  
 
   return (
-    <div className="flex flex-wrap flex-full 	">
+    <div className="flex flex-wrap flex-full pt-16 justify-center	">
       {events.map((event) => (
-        <div className="cursor-pointer" onClick={eventHandleClick}>
-          <EventCard key={event.id} event={event}  />
+        <div key={event.id} className="cursor-pointer" >
+          <EventCard  event={event} setOnEvent={setOnEvent}  />
         </div>
       ))}
     </div>
   );
 };
 
-EventsList.propTypes = {};
+EventsList.propTypes = {
+    setOnEvent: PropTypes.func
+};
 
 export default EventsList;
