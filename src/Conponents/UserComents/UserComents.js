@@ -4,11 +4,15 @@ import maria from "../../EventDev/maria.jpg";
 
 const UserComents = (props) => {
   return (
-    <div className=" flex flex-col text-xs	p-1 m-8 rounded-md border  shadow-lg text-slate-500 w-20 ">
+    <div className="flex flex-col justify-center  w-24" >
+
+    <div className=" flex flex-col 	p-1  m-1  rounded-md border  shadow-lg   self-center ">
       <img src={maria} alt="maria"  />
-      <div className="mt-4 overflow-hidden text-ellipsis whitespace-nowrap ">
-        <span>Maria Andrés Medina</span>
       </div>
+      <div className="mt-1 text-xs text-center text-slate-500  ">
+        <span>Maria Andrés Medina </span>
+    </div>
+    
     </div>
   );
 };
