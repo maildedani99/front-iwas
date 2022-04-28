@@ -14,6 +14,7 @@ const EventView = (props) => {
 
   return (
     <Router>
+      
       <div
         className="flex flex-row w-full min-h-screen"
         style={{ marginTop: "90px" }}

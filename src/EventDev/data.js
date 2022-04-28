@@ -4,7 +4,7 @@ export const events = [
     {
         id:1,
         title: "Salida al campo",
-        description: "Salida al campo con la familia de Pedro",
+        description: "Salida al campo con la familia de Pedro y sus primos de cantabria Salida al campo con la familia de Pedro y sus primos de cantabria",
         date: "marzo 2022",
         participants
  : ["Dani", "Lida", "Gerard"]
