@@ -4,10 +4,12 @@ import logo from "../../assets/iwastextblue.png";
 import "../Navbar/navbar.css";
 import Button from "../Button";
 import LoginModal from "../LoginModal";
-import { searchStyles } from "../../styles/styles";
+import { searchStyles, focusSearchStyles } from "../../styles/styles";
+import InputText from "../InputText/InputText";
 
 const Navbar = (props) => {
   const [loginModalOpened, setLoginModalOpened] = useState(false);
+  const [searchFocus, setSearchFocus] = useState(searchStyles)
 
   const onIniciar = () => {
     console.log("inciciar sesion click");
@@ -26,7 +28,8 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="flex flex-1 justify-center	 p-5 ">
-        <input type="text" name="search" id="search" style={searchStyles} placeholder="Busca un evento..." />
+        {/* <input type="text" name="search" id="search" onBlur={()=>setSearchFocus(searchStyles) } onFocus={()=>setSearchFocus(focusSearchStyles) } style={searchFocus} placeholder="Busca un evento..." /> */}
+        <InputText style={searchStyles} focusStyle={focusSearchStyles} placeholder="Busca un evento..."/>
       </div>
       <div className="mt-6 mr-4">
         <Button

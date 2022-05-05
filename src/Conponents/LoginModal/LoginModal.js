@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import 'react-responsive-modal/styles.css';
 import {Modal} from 'react-responsive-modal';
 import logo from '../../assets/iwblue.png';
-import { inputStyles } from '../../styles/styles';
+import { focusSearchStyles, inputStyles, searchStyles } from '../../styles/styles';
 import Button from '../Button/index' ;
+import InputText from '../InputText/InputText';
 
 const LoginModal = ({ loginModalOpened, setLoginModalOpened }) => {
   
@@ -16,6 +17,7 @@ const LoginModal = ({ loginModalOpened, setLoginModalOpened }) => {
         <div className="text-5xl mt-8 flex flex-col items-center	font-bold	  text-center	">
           <img src={logo} alt="iwas" width="50px" />
           <span className="mt-8">Bienvenido a Iwas</span>
+          <InputText style={searchStyles} focusStyle={focusSearchStyles} placeholder="Busca un evento..."/>
           <input
             style={inputStyles}
             className="mt-10 text-2xl"
