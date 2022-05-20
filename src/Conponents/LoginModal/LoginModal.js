@@ -19,24 +19,24 @@ const LoginModal = ({ loginModalOpened, setLoginModalOpened }) => {
 
   return (
     <div>
-      <Modal open={loginModalOpened} onClose={onCloseModal} center>
-        <div className="text-5xl mt-8 flex flex-col items-center	font-bold	  text-center	">
+      <Modal className="w82/12" open={loginModalOpened} onClose={onCloseModal} center>
+        <div className="text-2xl mt-8 flex flex-col items-center font-bold text-center	">
           <img src={logo} alt="iwas" width="50px" />
-          <span className="mt-8">Bienvenido a Iwas</span>
+          <span className="mt-8">Bienvenido/a a Iwas</span>
           <InputText
-            className="mt-20 text-xl"
+            className="mt-20 text-base"
             style={inputStyles}
             focusStyle={focusInputStyles}
             placeholder="Correo"
           />
           <InputText
-            className="mt-5 text-xl"
+            className="mt-5 text-base"
             style={inputStyles}
             focusStyle={focusInputStyles}
             placeholder="Contraseña"
           />
           <span className="text-sm mt-4 mb-8">¿Olvidaste tu contraseña?</span>
-          <div className="text-2xl w-1/2 mb-6 ">
+          <div className="text-base w-1/2  ">
             <Button
               value="Iniciar sesión"
               onClick={() => console.log("inciar sesion click")}
@@ -45,10 +45,14 @@ const LoginModal = ({ loginModalOpened, setLoginModalOpened }) => {
               backgroundColor="#04a5a4"
             />
           </div>
-          <div className="text-xl font-normal mt-4 mb-6">o</div>
-          <div className="flex flex-row text-2xl border rounded-full p-3 mb-16">
-            <img src={google} alt="google" width="48px" />
-            <Button value="Continuar con Google" />
+          <div className="text-base font-normal mt-4 mb-4">o</div>
+          <div className="flex flex-row text-base w-1/2  border rounded-full px-4 py-1 mb-16">
+            <div className="flex w-6  h-6 mt-2">
+              <img src={google} alt="google" />
+            </div>
+            <div className="ml-8">
+              <Button value="Continuar con Google" />
+            </div>
           </div>
           <div className="flex w-6/12 text-sm font-normal 	">
             <p>

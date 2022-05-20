@@ -4,15 +4,18 @@ import logo from "../../assets/iwastextblue.png";
 import "../Navbar/navbar.css";
 import Button from "../Button";
 import LoginModal from "../LoginModal";
-import { searchStyles, focusSearchStyles, inputStyles, focusInputStyles } from "../../styles/styles";
+import {
+  searchStyles,
+  focusSearchStyles,
+  inputStyles,
+  focusInputStyles,
+} from "../../styles/styles";
 import InputText from "../InputText/InputText";
 import RegisterModal from "../RegisterModal/RegisterModal";
 
 const Navbar = (props) => {
-
   const [loginModalOpened, setLoginModalOpened] = useState(false);
   const [registerModalOpened, setRegisterModalOpened] = useState(false);
-
 
   const onIniciar = () => {
     console.log("inciciar sesion click");
@@ -28,7 +31,6 @@ const Navbar = (props) => {
         registerModalOpened={registerModalOpened}
         setRegisterModalOpened={setRegisterModalOpened}
       />
-      
 
       <div className="ml-4 flex flex-col mt-4 ">
         <div className="">
@@ -36,9 +38,13 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="flex flex-1 justify-center	 p-5 ">
-        <InputText style={inputStyles} focusStyle={focusInputStyles} placeholder="Busca un evento..."/>
+        <InputText
+          style={inputStyles}
+          focusStyle={focusInputStyles}
+          placeholder="Busca un evento..."
+        />
       </div>
-      
+
       <div className="mt-6 mr-4">
         <Button
           value="Iniciar sesión"
@@ -56,7 +62,6 @@ const Navbar = (props) => {
           backgroundColor="#efefef"
         />
       </div>
-      
     </div>
   );
 };
