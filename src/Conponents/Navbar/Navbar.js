@@ -4,12 +4,15 @@ import logo from "../../assets/iwastextblue.png";
 import "../Navbar/navbar.css";
 import Button from "../Button";
 import LoginModal from "../LoginModal";
-import { searchStyles, focusSearchStyles } from "../../styles/styles";
+import { searchStyles, focusSearchStyles, inputStyles, focusInputStyles } from "../../styles/styles";
 import InputText from "../InputText/InputText";
+import RegisterModal from "../RegisterModal/RegisterModal";
 
 const Navbar = (props) => {
+
   const [loginModalOpened, setLoginModalOpened] = useState(false);
-  const [searchFocus, setSearchFocus] = useState(searchStyles)
+  const [registerModalOpened, setRegisterModalOpened] = useState(false);
+
 
   const onIniciar = () => {
     console.log("inciciar sesion click");
@@ -21,6 +24,11 @@ const Navbar = (props) => {
         loginModalOpened={loginModalOpened}
         setLoginModalOpened={setLoginModalOpened}
       />
+      <RegisterModal
+        registerModalOpened={registerModalOpened}
+        setRegisterModalOpened={setRegisterModalOpened}
+      />
+      
 
       <div className="ml-4 flex flex-col mt-4 ">
         <div className="">
@@ -28,9 +36,9 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="flex flex-1 justify-center	 p-5 ">
-        {/* <input type="text" name="search" id="search" onBlur={()=>setSearchFocus(searchStyles) } onFocus={()=>setSearchFocus(focusSearchStyles) } style={searchFocus} placeholder="Busca un evento..." /> */}
-        <InputText style={searchStyles} focusStyle={focusSearchStyles} placeholder="Busca un evento..."/>
+        <InputText style={inputStyles} focusStyle={focusInputStyles} placeholder="Busca un evento..."/>
       </div>
+      
       <div className="mt-6 mr-4">
         <Button
           value="Iniciar sesión"
@@ -43,11 +51,12 @@ const Navbar = (props) => {
       <div className="mt-6 mr-4">
         <Button
           value="Registrarse"
-          onClick={onIniciar}
+          onClick={() => setRegisterModalOpened(true)}
           textColor="Black"
           backgroundColor="#efefef"
         />
       </div>
+      
     </div>
   );
 };
