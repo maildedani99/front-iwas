@@ -31,13 +31,12 @@ const Navbar = (props) => {
         registerModalOpened={registerModalOpened}
         setRegisterModalOpened={setRegisterModalOpened}
       />
-
       <div className="ml-4 flex flex-col mt-4 ">
         <div className="">
           <img src={logo} alt="iwas" width="150px" />
         </div>
       </div>
-      <div className="flex flex-1 justify-center	 p-5 ">
+      <div className="flex flex-1 justify-center p-5">
         <InputText
           style={inputStyles}
           focusStyle={focusInputStyles}

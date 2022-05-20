@@ -1,14 +1,20 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-const InputText = ({style, focusStyle, placeholder, name, className }) => {
-
-    const [onFocusStyle, setOnFocusStyle] = useState(style)
+const InputText = ({ style, focusStyle, placeholder, name, className }) => {
+  const [onFocusStyle, setOnFocusStyle] = useState(style);
   return (
-    <input className={className} type="text" style={onFocusStyle} onFocus={()=>setOnFocusStyle(focusStyle)} onBlur={()=>setOnFocusStyle(style)} placeholder={placeholder} />
-  )
-}
+    <input
+      className={className}
+      type="text"
+      style={onFocusStyle}
+      onFocus={() => setOnFocusStyle(focusStyle)}
+      onBlur={() => setOnFocusStyle(style)}
+      placeholder={placeholder}
+    />
+  );
+};
 
-InputText.propTypes = {}
+InputText.propTypes = {};
 
-export default InputText
+export default InputText;
