@@ -19,23 +19,29 @@ const LoginModal = ({ loginModalOpened, setLoginModalOpened }) => {
 
   return (
     <div>
-      <Modal className="w82/12" open={loginModalOpened} onClose={onCloseModal} center>
+      <Modal
+        className="w-2/12"
+        open={loginModalOpened}
+        onClose={onCloseModal}
+        center
+      >
         <div className="text-2xl mt-8 flex flex-col items-center font-bold text-center	">
           <img src={logo} alt="iwas" width="50px" />
-          <span className="mt-8">Bienvenido/a a Iwas</span>
+          <span className="mt-8 text-4xl">Bienvenido/a a </span>
+          <span className="mt-2 text-4xl">Iwas</span>
           <InputText
-            className="mt-20 text-base"
+            className="mt-8 text-base"
             style={inputStyles}
             focusStyle={focusInputStyles}
             placeholder="Correo"
           />
           <InputText
-            className="mt-5 text-base"
+            className="mt-2 text-base"
             style={inputStyles}
             focusStyle={focusInputStyles}
             placeholder="Contraseña"
           />
-          <span className="text-sm mt-4 mb-8">¿Olvidaste tu contraseña?</span>
+          <span className="text-sm mt-1 mb-8">¿Olvidaste tu contraseña?</span>
           <div className="text-base w-1/2  ">
             <Button
               value="Iniciar sesión"
@@ -46,7 +52,7 @@ const LoginModal = ({ loginModalOpened, setLoginModalOpened }) => {
             />
           </div>
           <div className="text-base font-normal mt-4 mb-4">o</div>
-          <div className="flex flex-row text-base w-1/2  border rounded-full px-4 py-1 mb-16">
+          <div className="flex flex-row text-base w-1/2  border rounded-full px-4 py-1 mb-6">
             <div className="flex w-6  h-6 mt-2">
               <img src={google} alt="google" />
             </div>
