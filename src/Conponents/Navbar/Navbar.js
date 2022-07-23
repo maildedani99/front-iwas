@@ -53,7 +53,7 @@ const Navbar = (props) => {
           backgroundColor="#04a5a4"
         />
       </div>
-      <div className="mt-6 mr-4">
+      <div className="mt-6 mr-4 font-bold">
         <Button
           value="Registrarse"
           onClick={() => setRegisterModalOpened(true)}
